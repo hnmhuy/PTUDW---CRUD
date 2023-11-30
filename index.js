@@ -7,6 +7,8 @@ const { createPagination } = require("express-handlebars-paginate");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.set("views", __dirname + "/views");
+
 app.use(express.static(__dirname + "/html"));
 app.engine(
   "hbs",
